@@ -10,23 +10,26 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Acerca de</a></li>
-                <li><a href=""></a>Encriptar Archivos</li>
-            </ul>
+            <img src="./img/Logo.png" alt="Logo de Alura Latam" class="logo">
         </nav>
     </header>
     <main>
-        <h1>Encriptador de Texto Alura
-        </h1>
         <section>
-            <h2>Ingrese su texto aqui</h2>
-            <input type="text" required>
+            <textarea class="textarea" placeholder="Ingrese el texto aqui" cols="30" rows="15"></textarea>
+            <div>
+                <h6 class="informacion">Solo letras minúsculas y sin acentos</h6>
+            </div>
+            <div class="botones">
+                <button class="btn-encriptar">Encriptar</button>
+                <button class="btn-desencriptar">Desencriptar</button>
+            </div> 
         </section>
-    </main>
-    <footer>
-        <p>Creado por DevLuis</p>
-    </footer>
+        <section class="">
+            <textarea class="mensaje" placeholder="" cols="20" rows="10"></textarea>
+            <div>
+                <button class="btn-copiar">Copiar</button>
+            </div>
+        </section>
+    </main> 
 </body>
 </html>
