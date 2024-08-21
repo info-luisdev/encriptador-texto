@@ -1,5 +1,6 @@
 const textArea = document.querySelector(".textarea");
 const mensaje = document.querySelector(".mensaje");
+const btnCopiar = document.querySelector(".btn-copiar")
 
 
 function btnEncriptar() {
@@ -7,6 +8,8 @@ function btnEncriptar() {
     mensaje.value = textoEncriptado;
     textArea.value = "";
     mensaje.style.backgroundImage = "none";
+    btnCopiar.style.display = "inline";
+    
 }
 
 function encriptar(stringEncriptado) {
@@ -25,7 +28,7 @@ function btnDesencriptar() {
     const textoEncriptado = desencriptar(textArea.value);
     mensaje.value = textoEncriptado;
     textArea.value = "";
-    
+    btnCopiar.style.display = "inline";
 }
 
 function desencriptar(stringDesencriptado) {
@@ -34,8 +37,20 @@ function desencriptar(stringDesencriptado) {
 
     for(let i=0; i < matrizCodigo.length; i++) {
         if (stringDesencriptado.includes(matrizCodigo[i][1])) {
-            stringEncriptado = stringDesencriptado.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0]);
+            stringDesencriptado = stringDesencriptado.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0]);
         }
     } 
     return stringDesencriptado;
+}
+
+function limpiar() {
+    mensaje.value = "";
+    textArea.value = "";
+    mensaje.style.backgroundImage = 'url("../img/Muñeco.png")';
+    btnCopiar.style.display = "none";
+
+}
+
+function copiar(textoCopiado) {
+    navigator.clipboard.writeText(mensaje.value);
 }

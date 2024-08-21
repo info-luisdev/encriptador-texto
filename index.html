@@ -15,17 +15,18 @@
         <section>
             <textarea class="textarea" placeholder="Ingrese el texto aqui" cols="30" rows="5"></textarea>
             <div>
-                <h6 class="informacion">Solo letras minúsculas y sin acentos</h6>
+                <h6 class="informacion"> <img class="icon-info" src="img/info-square.svg" alt="">Solo letras minúsculas y sin acentos</h6>
             </div>
             <div class="botones">
                 <button class="btn-encriptar" onclick="btnEncriptar();">Encriptar</button>
-                <button class="btn-desencriptar" onclick="btnDesencriptar">Desencriptar</button>
+                <button class="btn-desencriptar" onclick="btnDesencriptar();">Desencriptar</button>
+                <button class="btn-limpiar" onclick="limpiar();">Limpiar</button>
             </div> 
         </section>
         <section class="">
-            <textarea class="mensaje" placeholder="" cols="20" rows="10"></textarea>
+            <textarea class="mensaje" placeholder="" cols="20" rows="10" readonly></textarea>
             <div>
-                <button class="btn-copiar">Copiar</button>
+                <button class="btn-copiar" onclick="copiar();" hidden>Copiar</button>
             </div>
         </section>
     </main> 
